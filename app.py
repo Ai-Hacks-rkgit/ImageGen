@@ -8,7 +8,7 @@ from firebase_admin import credentials, db
 # Firebase setup
 if not firebase_admin._apps:
 
-    cred = credentials.Certificate("{
+    cred = credentials.Certificate('''{
   "type": "service_account",
   "project_id": "hacktheprompt-imagegen",
   "private_key_id": "e1569d8c0ef94160d119c66af5f4a7a2146823db",
@@ -20,7 +20,7 @@ if not firebase_admin._apps:
   "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-rf4lq%40hacktheprompt-imagegen.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
-}")
+}''')
 
     firebase_admin.initialize_app(cred, {
 
