@@ -8,7 +8,19 @@ from firebase_admin import credentials, db
 # Firebase setup
 if not firebase_admin._apps:
 
-    cred = credentials.Certificate("hacktheprompt-imagegen-firebase-adminsdk-rf4lq-e1569d8c0e.json")  # Replace with your Firebase credential file
+    cred = credentials.Certificate("{
+  "type": "service_account",
+  "project_id": "hacktheprompt-imagegen",
+  "private_key_id": "e1569d8c0ef94160d119c66af5f4a7a2146823db",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDMjLzXnoFwVEh8\nXrvKzuJTjmGODponC7okLvxGowZToq59jf8Y1S7fTAIBblEuYjCDhwmElqxLDtfP\nI9Be3DC9/t0/zQdSq4SSaU0I+hCDbi73tig3WjoFrceTPxNdLJ2UzPDqzicKBpSv\nqt0Zd7p3tpl9ypq/COF7Upbt5XioYH1CHF1To062oGIJjSegeklBsNpV7an0CBWn\n5rAfn8xOpqBN4k2v0NwnVcZzQ1hwC1HV+Z3k5f7udROX6++Y8rX9uM0ZQB4yNjfQ\nQXv8UxNyukhU5MW3jWLcnimSvIRZdiyP/2yascpjCP7ITUQ2e72iHV/mn1RRnyQC\nxUS8i/4BAgMBAAECggEABz3WSQCSDuLU/B4zIh9ykMhiI3At50L5heK/SKrohEPR\nT0hHJzRo5+aIzaR/rZeJUHwSi1tK4eS2dt1gOPOCVZT1H+ycx+xNkbdg+aKMvMfE\n/ue32G8nzbVUyEg74cO8wnICTMsb7mAZmcx/7lu4QhkN/w+SAesJEd90e3CbyxjV\nz9fMGdFyrZGtW9mxlS9NPgYN24H8ODXhb+YXvTpQCrMXsyDtSxQWTQUFh433JWOT\n4zzZjtbgoTx0Fo9S/E2z9n6z/0y+suN5Xt/v1E1GMPIHe5hW8zrt+Mncv401ccQd\nEijH73CgczRq+7mYy92Z/25EAzEDkOnEPjviXtFFFwKBgQD369BB6lEpmnxeGOKm\n6Mieu9AIMz5sQBCE2alJMQfxwcnFWOdbsKNzpQ25ht6R9pw3VYNQsltsNdGeI0P9\nk6TdlfDfxG+OuuiFgUOw8BP3wjebsR9OaPsj9JXknJCJMdUG5jl0LycETwkrVzLO\nNcYDk66YJ8X9w4hhiO5Q9vChTwKBgQDTNx11iz58rcO8a5zBPcQeahPPQoi6DKq3\n1YTPxZjosL6BYDIDFHxP++Rt4fxbJqgZSkKvuc2WeoJ4FXtT1rPlXdUTkA6pb4Yp\nEO4Cx0ZH5FgvJ5HqU0+GWAYv87GnmIQgy/BduMVkpp1nL3/Nk9+wMjCJwmB47tq8\nz9oDA053rwKBgQCyrrDAcSLh+0fbgdAJQAkn7nD3GAfLeTjupvmNmNsC8Qp9Q6Ar\nw1lqxfDoYD4VsUnRz73+8S1XBkr30K72Ge1fDuw2Opu0oR1o60tgQQgDL2VovvWz\nS5KFzYgi5nx9hP7mJBQQmtNiFZykMgqZ+MOoXE4ft7rJNJ4cvdYVYIT5nQKBgQCf\nePurJkk1xdUFzJJ8bPBIrnrqgCfPoYS8bGBsp5q+BcSw1jqsjKkXku5z8K6i+9rr\nzV/wYe9R8InVtRJ6yJ7nTSN2M8x+LZA0LW4nduIfoc7bO5s2O1TN8GQrjGnUSplo\nUdLYUIvpZMtvfzOVulKoLBztxm8kn+NTr/PBVpvGTQKBgD5GLKGmZ076qLEr0dR5\nkUnuWTONkkyUPY3C5t8ZDcWfE+rxv0Gn6HQ+nDubluU1PQ5cN95c7Y2GvdMaaw1Z\nn33vE6c1Zar3MUPBibGPSQ9WI7TFx1cDswNB38LrBECe+4bBoCLewVuvkec8gGAZ\nO0Aed4fjkJPHEIQc5QLpcJbh\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-rf4lq@hacktheprompt-imagegen.iam.gserviceaccount.com",
+  "client_id": "115325019680223120359",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-rf4lq%40hacktheprompt-imagegen.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}")
 
     firebase_admin.initialize_app(cred, {
 
