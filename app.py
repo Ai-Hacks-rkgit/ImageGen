@@ -87,7 +87,7 @@ def participant_view():
                 actual_prompt = img_info["prompt"]
                 score = calculate_similarity(guessed_prompt, actual_prompt)
                 save_scores_to_firebase(name, idx + 1, score)
-                st.write(f"Your similarity score for Image {idx + 1} is: {score:.2f}")
+               # st.write(f"Your similarity score for Image {idx + 1} is: {score:.2f}")
 
     # save_scores_to_firebase(name, scores)
 
