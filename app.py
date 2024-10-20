@@ -33,7 +33,7 @@ def calculate_similarity(guess, actual):
     return cosine_sim[0][1]  # Similarity score between 0 and 1
 
 def score_LT(score):
-  return 100+(score*899)
+  return 400+(score*599)
 
 # Function to save score to Firebase
 def save_scores_to_firebase(name,img_index, score):
