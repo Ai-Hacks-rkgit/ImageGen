@@ -8,7 +8,7 @@ from firebase_admin import credentials, db
 # Firebase setup
 if not firebase_admin._apps:
 
-    cred = credentials.Certificate("/content/hacktheprompt-imagegen-firebase-adminsdk-rf4lq-e1569d8c0e.json")  # Replace with your Firebase credential file
+    cred = credentials.Certificate("hacktheprompt-imagegen-firebase-adminsdk-rf4lq-e1569d8c0e.json")  # Replace with your Firebase credential file
 
     firebase_admin.initialize_app(cred, {
 
